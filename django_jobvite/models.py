@@ -22,7 +22,7 @@ class Category(models.Model):
 class Position(models.Model):
     job_id = models.CharField(max_length=25)
     title = models.CharField(max_length=100)
-    requisition_id = models.PositiveIntegerField()
+    requisition_id = models.PositiveIntegerField(blank=True, null=True)
     category = models.ForeignKey(Category, null=True, blank=True)
     job_type = models.CharField(max_length=10)
     location = models.CharField(max_length=150, null=True, blank=True)
