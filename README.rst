@@ -10,7 +10,13 @@ Jobvite.
 Installation
 ------------
 
-To use ``django_jobvite`` to ``INSTALLED_APPS`` in ``settings.py``: ::
+Install ``django_jobvite`` and ``bleach`` on your path: ::
+
+   pip install -e git://github.com/jsocol/bleach.git#egg=bleach
+   pip install -e git+https://github.com/zerocoordinate/deployer.git#egg=deployer
+
+
+To use include ``django_jobvite`` to ``INSTALLED_APPS`` in ``settings.py``: ::
 
    INSTALLED_APPS = (
        ...
