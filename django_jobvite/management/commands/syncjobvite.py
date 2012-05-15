@@ -105,6 +105,7 @@ class Command(BaseCommand):
                 category.slug = slugify(category.name)
                 category.save()
             position.category = category
+            position.requisition_id = position.requisition_id or None
             position.save()
         job_ids = parsed.keys()
         stats['deleted'] = self._remove_deleted_positions(job_ids)
